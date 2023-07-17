@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whatsapp Clone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li>
+                    <div class="dropdown">
+                        <a href="#">New Group</a>
+                        <a href="#">Starred Messages</a>
+                        <a href="#">Select Chats</a>
+                        <a href="#">Settings</a>
+                        <a href="#">Logout</a>
+                    </div>
+                    <a href="#"><i class="fa-solid fa-ellipsis-vertical dots"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa-solid fa-camera camera"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa-solid fa-magnifying-glass search"></i></a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-moon moon" style="display: none;"></i>
+                        <i class="fa-solid fa-sun theme"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa-solid fa-wifi airplane"></i></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa-solid fa-user-plus add-acc"></i></a>
+                </li>
+                <p>Whatsapp</p>
+            </ul>
+            <ul class="info-list">
+                <li><a href="#" data-info="#communities"><i class="fa-solid fa-users"></i></a></li>
+                <li><a href="#" data-info="#chats" class="active">Chats</a></li>
+                <li><a href="#" data-info="#groups">Groups</a></li>
+                <li><a href="#" data-info="#status">Status</a></li>
+                <li><a href="#" data-info="#calls">Calls</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="camera-box">
+        <div class="top">
+            <i class="fa-solid fa-xmark close"></i>
+            <i class="fa-solid fa-bolt-lightning"></i>
+        </div>
+        <div class="med">
+            <i class="fa-regular fa-image"></i>
+            <div class="cam-shape"></div>
+            <i class="fa-solid fa-rotate"></i>
+        </div>
+        <div class="bottom">
+            <span>Video</span>
+            <span>Photo</span>
+        </div>
+    </div>
+    <div class="search-box">
+        <div class="search-bar">
+            <input type="search" name="search" id="search" placeholder="Search...">
+            <i class="fa-solid fa-arrow-left"></i>
+        </div>
+        <div class="s-boxs">
+            <div class="s-box">
+                <span>
+                    <i class="fa-solid fa-inbox"></i> Unread
+                </span>
+            </div>
+            <div class="s-box">
+                <span>
+                    <i class="fa-solid fa-image"></i> Photos
+                </span>
+            </div>
+            <div class="s-box">
+                <span>
+                    <i class="fa-solid fa-video"></i> Videos
+                </span>
+            </div>
+            <div class="s-box">
+                <span>
+                    <i class="fa-solid fa-link"></i> Links
+                </span>
+            </div>
+            <div class="s-box">
+                <span>
+                    <i class="fa-regular fa-registered"></i> GIFs
+                </span>
+            </div>
+            <div class="s-box">
+                <span>
+                    <i class="fa-solid fa-headphones-simple"></i> Audio
+                </span>
+            </div>
+            <div class="s-box">
+                <span>
+                    <i class="fa-solid fa-file"></i> Documents
+                </span>
+            </div>
+            <div class="s-box">
+                <span>
+                    <i class="fa-solid fa-square-poll-vertical"></i> Polls
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="airplane-popup">
+        <h3>Airplane Mode</h3>
+        <p>While airplane mode is on, you will not be able to send/recive messages.</p>
+        <div>
+            <a href="#" class="cancel">Cancel</a>
+            <a href="#" class="activate">Activate</a>
+        </div>
+    </div>
+    <div class="add-acc_popup">
+        <span>Accounts <i class="fa-solid fa-plus"></i></span>
+    </div>
+    <div id="root" class="container">
+        <section class="chats-container section active" id="chats">
+            <div class="chat">
+                <div class="chat-avatar">
+                    <img class="after" src="images/av-4.jpg" alt="avatar image">
+                </div>
+                <div class="chat-txt">
+                    <div class="chat-name">
+                        <p>Ava Martinez</p>
+                    </div>
+                    <div class="chat-message to">
+                        <img class="blue" src="images/trueicon.png" alt="true image">
+                        <p>
+                            I'm good, what about you
+                        </p>
+                    </div>
+                    <div class="chat-date">
+                        <p>Now</p>
+                    </div>
+                </div>
+            </div>
+            <div class="chat">
+                <div class="chat-num">
+                    <span>3</span>
+                </div>
+                <div class="chat-avatar">
+                    <img src="images/av-5.jpg" alt="avatar image">
+                </div>
+                <div class="chat-txt">
+                    <div class="chat-name">
+                        <p>Benjamin Johnson</p>
+                    </div>
+                    <div class="chat-message">
+                        <p class="typing">Typing....</p>
+                    </div>
+                    <div class="chat-date">
+                        <p>9:17 PM</p>
+                    </div>
+                </div>
+            </div>
+            <div class="chat">
+                <div class="chat-num">
+                    <span>1</span>
+                </div>
+                <div class="chat-avatar">
+                    <img class="after" src="images/av-1.avif" alt="avatar image">
+                </div>
+                <div class="chat-txt">
+                    <div class="chat-name">
+                        <p>Ahmed Mostafa</p>
+                    </div>
+                    <div class="chat-message">
+                        <p>How It's Going Broo, I didn't sow you today in the meeting</p>
+                    </div>
+                    <div class="chat-date">
+                        <p>Yesterday</p>
+                    </div>
+                </div>
+            </div>
+            <div class="chat">
+                <div class="chat-avatar">
+                    <img src="images/av-2.png" alt="avatar image">
+                </div>
+                <div class="chat-txt">
+                    <div class="chat-name">
+                        <p>Seri Williams</p>
+                    </div>
+                    <div class="chat-message to">
+                        <img src="images/trueicon_light.png" alt="true icon">
+                        <p>
+                            Hi Seri, I want the meeting slides
+                        </p>
+                    </div>
+                    <div class="chat-date">
+                        <p>2:14 AM</p>
+                    </div>
+                </div>
+            </div>
+            <div class="chat">
+                <div class="chat-avatar">
+                    <img class="after" src="images/av-3.jpg" alt="avatar image">
+                </div>
+                <div class="chat-txt">
+                    <div class="chat-name">
+                        <p>Morgan Stanley</p>
+                    </div>
+                    <div class="chat-message to">
+                        <i class="fa-solid fa-check"></i>
+                        <p>
+                            Hello Mr Morgan, My name is Eslam Hafez and I'm frontend developer and English Language Student.
+                        </p>
+                    </div>
+                    <div class="chat-date">
+                        <p>7.12 PM</p>
+                    </div>
+                </div>
+            </div>
+            <div class="chat">
+                <div class="chat-avatar">
+                    <img class="after" src="images/av-6.jpg" alt="avatar image">
+                </div>
+                <div class="chat-txt">
+                    <div class="chat-name">
+                        <p>Alexander Brown</p>
+                    </div>
+                    <div class="chat-message to">
+                        <p>
+                            You reacted <i class="fa-solid fa-heart heart"></i> to "Thank You Bro"
+                        </p>
+                    </div>
+                    <div class="chat-date">
+                        <p>15/7/23</p>
+                    </div>
+                </div>
+            </div>
+            <div class="chat">
+                <div class="chat-avatar">
+                    <img src="images/av-7" alt="avatar image">
+                </div>
+                <div class="chat-txt">
+                    <div class="chat-name">
+                        <p>Mia Clark</p>
+                    </div>
+                    <div class="chat-message to">
+                        <p>
+                            Ok, I'm waiting
+                        </p>
+                    </div>
+                    <div class="chat-date">
+                        <p>15/7/23</p>
+                    </div>
+                </div>
+            </div>
+            <div class="chat">
+                <div class="chat-avatar">
+                    <img src="images/av-8.jpg" alt="avatar image">
+                </div>
+                <div class="chat-txt">
+                    <div class="chat-name">
+                        <p>David Robinson</p>
+                    </div>
+                    <div class="chat-message to">
+                        <p>
+                            David reacted <i class="fa-solid fa-heart heart"></i> to "خلصا الشغله"
+                        </p>
+                    </div>
+                    <div class="chat-date">
+                        <p>12/7/23</p>
+                    </div>
+                </div>
+            </div>
+            <div class="chat">
+                <div class="chat-num">
+                    <span>1</span>
+                </div>
+                <div class="chat-avatar">
+                    <img class="after" src="images/av-9.jpg" alt="avatar image">
+                </div>
+                <div class="chat-txt">
+                    <div class="chat-name">
+                        <p>Emma Hernandez</p>
+                    </div>
+                    <div class="chat-message to">
+                        <p>
+                            Okay
+                        </p>
+                    </div>
+                    <div class="chat-date">
+                        <p>11/7/23</p>
+                    </div>
+                </div>
+            </div>
+            <div class="chat">
+                <div class="chat-avatar">
+                    <img class="after" src="images/av-10.jpg" alt="avatar image">
+                </div>
+                <div class="chat-txt">
+                    <div class="chat-name">
+                        <p>Cristiano Ronaldo</p>
+                    </div>
+                    <div class="chat-message to">
+                        <img class="blue" src="images/trueicon.png" alt="true image">
+                        <p>
+                            حبيبي يا محترم سلملي علي الغاليه
+                        </p>
+                    </div>
+                    <div class="chat-date">
+                        <p>30/6/23</p>
+                    </div>
+                </div>
+            </div>
+            <div class="end-to-end">
+                <p>
+                    <i class="fa-solid fa-lock lock"></i>
+                    Your personal messages are <a href="#">end-to-end encrypted</a>
+                </p>
+            </div>
+        </section>
+
+        <section class="communities-container section" id="communities">
+            <div class="comm-img">
+                <img src="images/community_image.png" alt="community image">
+            </div>
+            <div class="comm-txt">
+                <h3>Stay Connected With A Community</h3>
+                <p>
+                    Communities bring members together in topic-based groups,
+                    and make it east to get admin announcements.Any community you're added to will appear here.
+                    <a href="#">Learn More</a>
+                </p>
+            </div>
+            <div class="comm-btn">
+                <a href="#">Start Your community</a>
+            </div>
+        </section>
+        <section class="groups-container section" id="groups">
+            <div class="chat">
+                <div class="chat-avatar">
+                    <img src="images/group_av-4.jpg" alt="avatar image">
+                </div>
+                <div class="chat-txt">
+                    <div class="chat-name">
+                        <p>Javascript Team</p>
+                    </div>
+                    <div class="chat-message">
+                        <p>
+                            You: e.preventDefault();
+                        </p>
+                    </div>
+                    <div class="chat-date">
+                        <p>2:43 AM</p>
+                    </div>
+                </div>
+            </div>
+            <div class="chat">
+                <div class="chat-num">
+                    <span>1</span>
+                </div>
+                <div class="chat-avatar">
+                    <img src="images/group_av-1.jpg" alt="avatar image">
+                </div>
+                <div class="chat-txt">
+                    <div class="chat-name">
+                        <p>Future software engineers</p>
+                    </div>
+                    <div class="chat-message to">
+                        <p>
+                            You reacted &#128514; to "<i class="fa-solid fa-note-sticky sticker"></i> Sticker"
+                        </p>
+                    </div>
+                    <div class="chat-date">
+                        <p>Today</p>
+                    </div>
+                </div>
+            </div>
+            <div class="chat">
+                <div class="chat-num">
+                    <span>18</span>
+                </div>
+                <div class="chat-avatar">
+                    <img class="gr-av" src="images/group_av-2.png" alt="avatar image">
+                </div>
+                <div class="chat-txt">
+                    <div class="chat-name">
+                        <p>Transteam</p>
+                    </div>
+                    <div class="chat-message">
+                        <p>
+                            Mr Ahmed: <i class="fa-regular fa-file-lines file"></i> Part2 Installation Materiales.pdf
+                        </p>
+                    </div>
+                    <div class="chat-date">
+                        <p>Yesterday</p>
+                    </div>
+                </div>
+            </div>
+            <div class="chat">
+                <div class="chat-num">
+                    <span>7</span>
+                </div>
+                <div class="chat-avatar">
+                    <img class="gr-av" src="images/group_av-5.png" alt="avatar image">
+                </div>
+                <div class="chat-txt">
+                    <div class="chat-name">
+                        <p>English Departement</p>
+                    </div>
+                    <div class="chat-message">
+                        <p>
+                            Admin: جماعه 
+                        </p>
+                    </div>
+                    <div class="chat-date">
+                        <p>14/7/23</p>
+                    </div>
+                </div>
+            </div>
+            <div class="chat">
+                <div class="chat-avatar">
+                    <img src="images/group_av-3.jpg" alt="avatar image">
+                </div>
+                <div class="chat-txt">
+                    <div class="chat-name">
+                        <p>عودة العلاقات</p>
+                    </div>
+                    <div class="chat-message">
+                        <p>
+                            Osama Sultan: معاك 
+                        </p>
+                    </div>
+                    <div class="chat-date">
+                        <p>27/4/23</p>
+                    </div>
+                </div>
+            </div>
+            <div class="end-to-end">
+                <p>
+                    <i class="fa-solid fa-lock lock"></i>
+                    Your personal messages are <a href="#">end-to-end encrypted</a>
+                </p>
+            </div>
+        </section>
+
+        <section class="status-container section" id="status">
+            <div class="mystatus">
+                <div class="state">
+                    <img src="images/mystatus.jpg" alt="mystatus">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+                <div>
+                    <p>My status</p>
+                    <span>Tap to add status update</span>
+                </div>
+            </div>
+            <div class="recent">
+                <p>Recent updates</p>
+            </div>
+
+            <div class="state-row">
+                <div class="state-img">
+                    <img src="images/st-1.jpg" alt="state image" class="state-img">
+                </div>
+                <div class="state-txt">
+                    <p>Morgan Stanley</p>
+                    <span>2 minutes ago</span>
+                </div>
+            </div>
+            <div class="state-row">
+                <div class="state-img">
+                    <img src="images/av-6.jpg" alt="state image" class="state-img">
+                </div>
+                <div class="state-txt">
+                    <p>Alexander Brown</p>
+                    <span>4 minutes ago</span>
+                </div>
+            </div>
+            <div class="state-row">
+                <div class="state-img">
+                    <img src="images/av-4.jpg" alt="state image" class="state-img">
+                </div>
+                <div class="state-txt">
+                    <p>Ava Martinez</p>
+                    <span>9 minutes ago</span>
+                </div>
+            </div>
+            <div class="state-row">
+                <div class="state-img">
+                    <img src="images/av-1.avif" alt="state image" class="state-img">
+                </div>
+                <div class="state-txt">
+                    <p>Ahmed Mostafa</p>
+                    <span>12 minutes ago</span>
+                </div>
+            </div>
+            <div class="state-row">
+                <div class="state-img">
+                    <img src="images/av-9.jpg" alt="state image" class="state-img">
+                </div>
+                <div class="state-txt">
+                    <p>Emma Hernandez</p>
+                    <span>27 minutes ago</span>
+                </div>
+            </div>
+            <div class="state-row last">
+                <div class="state-img">
+                    <img src="images/av-10.jpg" alt="state image" class="state-img">
+                </div>
+                <div class="state-txt">
+                    <p>Cristiano Ronaldo</p>
+                    <span>Today, 4:26 PM</span>
+                </div>
+            </div>
+            <div class="recent viewed">
+                <p>Viewed updates</p>
+            </div>
+            <div class="state-row">
+                <div class="state-img">
+                    <img src="images/av-7" alt="state image" class="state-img viewed">
+                </div>
+                <div class="state-txt">
+                    <p>Mia Clark</p>
+                    <span>7 minutes ago</span>
+                </div>
+            </div>
+            <div class="state-row">
+                <div class="state-img">
+                    <img src="images/av-5.jpg" alt="state image" class="state-img viewed">
+                </div>
+                <div class="state-txt">
+                    <p>Benjamin Johnson</p>
+                    <span>Today, 5:48 PM</span>
+                </div>
+            </div>
+            <div class="state-row">
+                <div class="state-img">
+                    <img src="images/av-2.png" alt="state image" class="state-img viewed">
+                </div>
+                <div class="state-txt">
+                    <p>Seri Williams</p>
+                    <span>Today, 4:29 PM</span>
+                </div>
+            </div>
+            <div class="state-row">
+                <div class="state-img">
+                    <img src="images/av-8.jpg" alt="state image" class="state-img viewed">
+                </div>
+                <div class="state-txt">
+                    <p>David Robinson</p>
+                    <span>Today, 3:40 AM</span>
+                </div>
+            </div>
+            <div class="end-to-end">
+                <p>
+                    <i class="fa-solid fa-lock lock"></i>
+                    Your status updates are <a href="#">end-to-end encrypted</a>
+                </p>
+            </div>
+        </section>
+
+        <section class="calls-container section" id="calls">
+            <div class="call-row">
+                <a href="#"><i class="fa-solid fa-link link"></i></a>
+                <div>
+                    <p>Create call link</p>
+                    <span>Share a link for your Whatsapp call</span>
+                </div>
+            </div>
+            <div class="recent">
+                <p>Recent</p>
+            </div>
+            <div class="call-row">
+                <img src="images/av-1.avif" alt="avatar image">
+                <div>
+                    <p>Ahmed Mostafa</p>
+                    <i class="fa-solid fa-arrow-up forward"></i>
+                    <span>July 4, 11:33 PM </span>
+                </div>
+                <div class="phone">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+            </div>
+            <div class="call-row">
+                <img src="images/av-2.png" alt="avatar image">
+                <div>
+                    <p>Seri Williams</p>
+                    <i class="fa-solid fa-arrow-up backed"></i>
+                    <span>July 3, 12:26 PM </span>
+                </div>
+                <div class="phone">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+            </div>
+            <div class="call-row">
+                <img src="images/av-3.jpg" alt="avatar image">
+                <div>
+                    <p>Morgan Stanley</p>
+                    <i class="fa-solid fa-arrow-up missed"></i>
+                    <span>June 30, 3:18 PM </span>
+                </div>
+                <div class="phone">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+            </div>
+            <div class="call-row">
+                <img src="images/av-4.jpg" alt="avatar image">
+                <div>
+                    <p>Ava Martinez</p>
+                    <i class="fa-solid fa-arrow-up forward"></i>
+                    <span>(2) June 14, 2:45 PM </span>
+                </div>
+                <div class="phone">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+            </div>
+            <div class="call-row">
+                <img src="images/av-5.jpg" alt="avatar image">
+                <div>
+                    <p>Benjamin Johnson</p>
+                    <i class="fa-solid fa-arrow-up backed"></i>
+                    <span>June 7, 7:13 PM </span>
+                </div>
+                <div class="phone">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+            </div>
+            <div class="call-row">
+                <img src="images/av-6.jpg" alt="avatar image">
+                <div>
+                    <p>Alexander Brown</p>
+                    <i class="fa-solid fa-arrow-up missed"></i>
+                    <span>June 25, 3:29 AM </span>
+                </div>
+                <div class="phone">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+            </div>
+            <div class="call-row">
+                <img src="images/av-7" alt="avatar image">
+                <div>
+                    <p>Mia Clark</p>
+                    <i class="fa-solid fa-arrow-up missed"></i>
+                    <span>May 31, 9:11 PM </span>
+                </div>
+                <div class="phone">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+            </div>
+            <div class="call-row">
+                <img src="images/av-8.jpg" alt="avatar image">
+                <div>
+                    <p>David Robinson</p>
+                    <i class="fa-solid fa-arrow-up missed"></i>
+                    <span>May 8, 10:37 PM </span>
+                </div>
+                <div class="phone">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+            </div>
+            <div class="call-row">
+                <img src="images/av-9.jpg" alt="avatar image">
+                <div>
+                    <p>Emma Hernandez</p>
+                    <i class="fa-solid fa-arrow-up missed"></i>
+                    <span>April 24, 3:32 AM </span>
+                </div>
+                <div class="phone">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+            </div>
+            <div class="call-row">
+                <img src="images/av-10.jpg" alt="avatar image">
+                <div>
+                    <p>Cristiano Ronaldo</p>
+                    <i class="fa-solid fa-arrow-up forward"></i>
+                    <span>February 19, 8:1 AM </span>
+                </div>
+                <div class="phone">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="controlls-icons">
+        <div class="plus">
+            <i class="fa-solid fa-plus"></i>
+        </div>
+        <div class="icon">
+            <i class="fas fa-sync"></i>
+        </div>
+        <div class="icon">
+            <i class="fas fa-question-circle"></i>
+        </div>
+        <div class="icon">
+            <i class="fas fa-comment"></i>
+        </div>
+    </div>
+    <script src="javascript/app.js"></script>
+</body>
+</html>
